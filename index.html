@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AREEJ PERFUMES - Luxury Fragrance House">
+  <title>AREEJ PERFUMES | أريج للعطور</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a class="brand" href="#home">
+      <span class="brand-symbol">A</span>
+      <span class="brand-name">AREEJ <small>PERFUMES</small></span>
+    </a>
+
+    <nav class="navigation">
+      <a href="#home">الرئيسية</a>
+      <a href="#collections">المجموعات</a>
+      <a href="#products">العطور</a>
+    </nav>
+
+    <button class="cart-button" id="cartToggle">
+      حقيبة التسوق <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">THE ART OF FRAGRANCE</span>
+        <h1>الفخامة<br><em>لها عطر.</em></h1>
+        <p>اكتشفي عالماً من الروائح الاستثنائية، صُممت لتترك أثراً لا يُنسى.</p>
+        <a href="#products" class="gold-button">اكتشفي المجموعة <span>←</span></a>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-light"></div>
+        <div class="hero-product">
+          <div class="hero-cap"></div>
+          <div class="hero-neck"></div>
+          <div class="hero-bottle">
+            <span class="hero-label">AREEJ</span>
+            <small>PARFUM</small>
+            <span class="hero-mark">A</span>
+          </div>
+        </div>
+        <span class="visual-caption">COLLECTION Nº 01</span>
+      </div>
+
+      <div class="hero-index">01 — 04</div>
+    </section>
+
+    <section class="intro" id="collections">
+      <span class="eyebrow">THE AREEJ COLLECTION</span>
+      <h2>عطور تعبّر عنك</h2>
+      <p>أربع مجموعات، لكل واحدة منها شخصية مختلفة.</p>
+
+      <div class="collection-grid">
+        <button class="collection-card" data-category="men">
+          <span class="collection-number">01</span>
+          <span class="collection-title">الرجل</span>
+          <span class="collection-subtitle">MEN'S COLLECTION</span>
+        </button>
+
+        <button class="collection-card" data-category="women">
+          <span class="collection-number">02</span>
+          <span class="collection-title">المرأة</span>
+          <span class="collection-subtitle">WOMEN'S COLLECTION</span>
+        </button>
+
+        <button class="collection-card" data-category="unisex">
+          <span class="collection-number">03</span>
+          <span class="collection-title">للجنسين</span>
+          <span class="collection-subtitle">UNISEX COLLECTION</span>
+        </button>
+
+        <button class="collection-card" data-category="kids">
+          <span class="collection-number">04</span>
+          <span class="collection-title">الصغار</span>
+          <span class="collection-subtitle">KIDS COLLECTION</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="shop" id="products">
+      <div class="shop-heading">
+        <div>
+          <span class="eyebrow">DISCOVER YOUR SCENT</span>
+          <h2>مجموعة العطور</h2>
+        </div>
+        <input id="searchInput" type="search" placeholder="ابحثي برقم العطر">
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">جميع العطور</button>
+        <button class="filter-btn" data-filter="men">رجالي</button>
+        <button class="filter-btn" data-filter="women">نسائي</button>
+        <button class="filter-btn" data-filter="unisex">للجنسين</button>
+        <button class="filter-btn" data-filter="kids">أطفال</button>
+      </div>
+
+      <div class="products-grid" id="productsGrid"></div>
+      <p id="emptyMessage" class="empty-message" hidden>لا توجد نتائج مطابقة.</p>
+    </section>
+
+    <section class="brand-story">
+      <span class="story-symbol">A</span>
+      <span class="eyebrow">A SIGNATURE OF ELEGANCE</span>
+      <h2>ليس مجرد عطر،<br><em>بل توقيعك الخاص.</em></h2>
+      <p>AREEJ PERFUMES — The Art of Being Remembered.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">AREEJ PERFUMES</div>
+    <p>© 2026 AREEJ. جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-heading">
+      <h2>حقيبة التسوق</h2>
+      <button id="closeCart" aria-label="إغلاق">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-summary">
+      <div><span>الإجمالي</span><strong id="cartTotal">0 ر.س</strong></div>
+      <button id="checkoutButton">متابعة الطلب</button>
+      <small>الأسعار تجريبية، ولا يتوفر دفع إلكتروني فعلي.</small>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
